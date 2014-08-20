@@ -1,9 +1,0 @@
-#!/usr/bin/env node
-var app = require('../app');
-
-app.set('ipaddress', process.env.OPENSHIFT_NODEJS_IP || 'localhost');
-app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 9000);
-
-var server = app.listen(app.get('port'), app.get('ipaddress'), function() {
-  console.log('Express server listening on port ' + app.get('ipaddress') + ':' + app.get('port'));
-});
