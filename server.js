@@ -3,8 +3,8 @@
 'use strict';
 var express = require('express');
 var app = express();
-var ipaddr  = process.env.OPENSHIFT_INTERNAL_IP || '127.0.0.1',
-    port    = process.env.OPENSHIFT_INTERNAL_PORT || 9000;
+var ipaddr  = process.env.OPENSHIFT_NODEJS_IP || process.env.OPENSHIFT_INTERNAL_IP || 'localhost',
+    port    = process.env.OPENSHIFT_NODEJS_PORT || process.env.OPENSHIFT_INTERNAL_PORT || 9000;
 app.use(function(req, res, next) {
     console.log('%s %s %s', req.method, req.url, req.path);
     res.send({ 
