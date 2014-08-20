@@ -17,6 +17,7 @@
     "npm": ">= 1.4.0"
   },
   "dependencies": {
+    "cors": "^2.4.1",
     "express": "~4.0.0",
     "helmet": "^0.4.0"
   },
